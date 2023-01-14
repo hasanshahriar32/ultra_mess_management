@@ -17,7 +17,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react"],
+  plugins: ["react", "@next/next/recommended"],
   rules: {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
