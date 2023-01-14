@@ -23,7 +23,7 @@ export default function Home() {
           this is home
         </div>
 
-        <div className={styles.center}></div>
+        {/* <div className={styles.center}></div> */}
       </main>
     </>
   );
