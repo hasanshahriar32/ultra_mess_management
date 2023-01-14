@@ -18,7 +18,10 @@ export default function Home() {
         />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>{/* content here  */}</div>
+        <div className={styles.description}>
+          {/* content here  */}
+          this is home
+        </div>
 
         <div className={styles.center}></div>
       </main>
