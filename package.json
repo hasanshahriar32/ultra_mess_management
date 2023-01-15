@@ -9,6 +9,9 @@
     "lint": "eslint ./ --ext js,jsx,ts,tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
     "@next/font": "13.1.2",
     "@vercel/analytics": "^0.1.8",
     "daisyui": "^2.46.1",
