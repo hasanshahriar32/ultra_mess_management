@@ -14,6 +14,7 @@
     "@mui/material": "^5.11.4",
     "@next/font": "13.1.2",
     "@syncfusion/ej2-react-buttons": "^20.4.42",
+    "@syncfusion/ej2-react-calendars": "^20.4.42",
     "@syncfusion/ej2-react-navigations": "^20.4.43",
     "@vercel/analytics": "^0.1.8",
     "daisyui": "^2.46.1",

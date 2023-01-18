@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <div>
@@ -25,19 +27,25 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <Link href="/">Homepage</Link>
               </li>
               <li>
-                <a>Portfolio</a>
+                <Link href="/meal">Meal Track</Link>
               </li>
               <li>
-                <a>About</a>
+                <Link href="">About</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">আমিন ছাত্রাবাস</a>
+          <a
+            target="_blank"
+            href="https://maps.app.goo.gl/rgG9gV6fQRn3SFT46"
+            className="btn btn-ghost normal-case text-xl"
+          >
+            📍 আমিন ছাত্রাবাস
+          </a>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
