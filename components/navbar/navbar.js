@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GoLocation } from "react-icons/go";
 
 const Navbar = () => {
   return (
@@ -42,9 +43,9 @@ const Navbar = () => {
           <a
             target="_blank"
             href="https://maps.app.goo.gl/rgG9gV6fQRn3SFT46"
-            className="btn btn-ghost normal-case text-xl"
+            className="btn btn-ghost flex justify-between items-center w-52 normal-case text-xl"
           >
-            📍 আমিন ছাত্রাবাস
+            <GoLocation></GoLocation> আমিন ছাত্রাবাস
           </a>
         </div>
         <div className="navbar-end">

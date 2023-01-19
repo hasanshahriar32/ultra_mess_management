@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import { registerLicense } from "@syncfusion/ej2-base";
 import styles from "@/styles/Home.module.css";
+import { GoLocation } from "react-icons/go";
 // Registering Syncfusion license key
 registerLicense(
   "ORg4AjUWIQA/Gnt2VVhkQlFaclxJXGFWfVJpTGpQdk5xdV9DaVZUTWY/P1ZhSXxQdkRiXn5YdHNQR2FaVEI="
