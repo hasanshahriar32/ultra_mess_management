@@ -23,37 +23,43 @@ const DateSelect = () => {
         document.createTextNode(calendarInstance.values[index].toString()),
         element.childNodes[0]
       );
+      // make a  line break and list the selected dates
       element.insertBefore(document.createElement("br"), element.childNodes[0]);
     }
   }
 
   return (
-    <div className="col-lg-12">
-      <div className="col-lg-7 control-section">
-        <div
-          id="control_wrapper"
-          className="col-lg-6 col-sm-8 col-md-8 multiselectWrapper"
-        >
-          <div className="calendar-control-section">
-            <CalendarComponent
-              id="calendar"
-              isMultiSelection={true}
-              values={selectedValues}
-              min={minDate}
-              max={maxDate}
-              ref={(scope) => {
-                calendarInstance = scope;
-              }}
-              change={onchange.bind(this)}
-              created={onchange.bind(this)}
-            ></CalendarComponent>
+    <div
+      className="hero min-h-screen bg-base-200"
+      style={{ backgroundImage: `url("https://placeimg.com/1000/800/tech")` }}
+    >
+      <div className="hero-content flex-col lg:flex-row gap-5 ">
+        <div className=" control-section bg-base-300 m-3 p-4 rounded-lg">
+          <div
+            id="control_wrapper"
+            className="col-lg-6 col-sm-8 col-md-8 multiselectWrapper "
+          >
+            <div className="calendar-control-section w-28">
+              <CalendarComponent
+                id="calendar"
+                isMultiSelection={true}
+                values={selectedValues}
+                min={minDate}
+                max={maxDate}
+                ref={(scope) => {
+                  calendarInstance = scope;
+                }}
+                change={onchange.bind(this)}
+                created={onchange.bind(this)}
+              ></CalendarComponent>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-lg-5">
-        <label style={{ paddingTop: "22px" }}>Selected Meal Dates</label>
-        <div className="content-value">
-          <div id="multiselect"></div>
+        <div>
+          <label style={{ paddingTop: "22px" }}>Selected Meal Dates</label>
+          <div className="content-value">
+            <div id="multiselect"></div>
+          </div>
         </div>
       </div>
     </div>

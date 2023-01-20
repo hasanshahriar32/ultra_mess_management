@@ -18,7 +18,10 @@ const Meal = () => {
 
       <main className={styles.main}>
         <Navbar />
-        <DateSelect />
+        <div className="">
+          {" "}
+          <DateSelect />
+        </div>
       </main>
     </div>
   );
