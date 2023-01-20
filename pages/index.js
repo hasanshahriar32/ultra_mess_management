@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/navbar";
 import { registerLicense } from "@syncfusion/ej2-base";
 import styles from "@/styles/Home.module.css";
 import { GoLocation } from "react-icons/go";
+import HomeImages from "@/components/HomeCarousel/homeCarousel";
 // Registering Syncfusion license key
 registerLicense(
   "ORg4AjUWIQA/Gnt2VVhkQlFaclxJXGFWfVJpTGpQdk5xdV9DaVZUTWY/P1ZhSXxQdkRiXn5YdHNQR2FaVEI="
@@ -27,6 +28,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <Navbar />
+        <div className="flex justify-center w-[50vw] m-12">
+          <HomeImages></HomeImages>
+        </div>
       </main>
     </>
   );

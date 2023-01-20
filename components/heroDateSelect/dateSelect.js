@@ -1,7 +1,9 @@
 import * as React from "react";
-// import { updateSampleSection } from "../common/sample-base";
+import { updateSampleSection } from "./sample-base";
 import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
 import "./dateselect.module.css";
+
+// import styles from "./dateselect.module.css";
 
 const DateSelect = () => {
   let calendarInstance;
@@ -25,13 +27,19 @@ const DateSelect = () => {
       );
       // make a  line break and list the selected dates
       element.insertBefore(document.createElement("br"), element.childNodes[0]);
+      console.log(calendarInstance.values[index].toString() + " ");
+      //set to localstorage
+      localStorage.setItem(
+        "mealDate",
+        calendarInstance.values[index].toString()
+      );
     }
   }
 
   return (
     <div
       className="hero min-h-screen bg-base-200"
-      style={{ backgroundImage: `url("https://placeimg.com/1000/800/tech")` }}
+      // style={{ backgroundImage: `url("https://placeimg.com/1000/800/tech")` }}
     >
       <div className="hero-content flex-col lg:flex-row gap-5 ">
         <div className=" control-section bg-base-300 m-3 p-4 rounded-lg">

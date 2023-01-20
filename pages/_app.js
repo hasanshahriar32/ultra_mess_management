@@ -12,6 +12,15 @@ export default function App({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <Analytics />
+      <div
+        data-tf-popover="B9mOgUOl"
+        data-tf-custom-icon="https://images.typeform.com/images/wgWxpnu2tbfi"
+        data-tf-button-color="#F0E5C1"
+        data-tf-button-text="Launch me"
+        data-tf-iframe-props="title=Product Review Form Template (copy)"
+        data-tf-medium="snippet"
+      ></div>
+      <script src="//embed.typeform.com/next/embed.js"></script>
     </>
   );
 }
