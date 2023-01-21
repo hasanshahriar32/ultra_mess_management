@@ -57,10 +57,15 @@ const DateSelect = () => {
       element.insertBefore(document.createElement("br"), element.childNodes[0]);
       console.log(calendarInstance.values[index].toString() + " ");
       //set to localstorage
-      localStorage.setItem(
-        "mealDate",
-        calendarInstance.values[index].toString()
-      );
+      //if there already is a value in localstorage then add the new after it
+      const meal = localStorage.getItem("selectedMealDate");
+      if (meal) {
+        localStorage.setItem("selectedMealDate", meal + " " + args.value);
+      }
+      //if there is no value in localstorage then add the new value
+      else {
+        localStorage.setItem("selectedMealDate", args.value);
+      }
     }
   }
   const setSubmit = () => {
