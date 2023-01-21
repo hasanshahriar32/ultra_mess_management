@@ -34,7 +34,7 @@
   border: 1px solid rgb(150, 150, 150);
   background-color: black;
 }
-
+/* 
 body.fluent-dark #date_label,
 body.bootstrap5-dark #date_label,
 body.tailwind-dark #date_label,
@@ -43,7 +43,7 @@ body.fabric-dark #date_label,
 body.bootstrap-dark #date_label,
 body.highcontrast #date_label {
   color: white;
-}
+} */
 
 /* end of custom generated icons styles */
 .calendar-control-section {
@@ -60,7 +60,7 @@ body.highcontrast #date_label {
   margin-left: 5px;
 }
 
-body.fluent-dark #date_label,
+/* body.fluent-dark #date_label,
 body.bootstrap5-dark #date_label,
 body.tailwind-dark #date_label,
 body.material-dark #date_label,
@@ -68,4 +68,13 @@ body.fabric-dark #date_label,
 body.bootstrap-dark #date_label,
 body.highcontrast #date_label {
   color: white;
+} */
+
+.e-cell {
+  background-color: #f5f5f5;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #f5f5f5;
+  margin: 1px;
+  padding: 1px;
 }

@@ -5,13 +5,31 @@ import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
 
 const DateSelect = () => {
   let calendarInstance;
+
+  // //get data from localstorage
+  // const data = window.localStorage.getItem("selectedMealDate");
+
+  // //split by comma
+  // const dataSplit = data?.split(",");
+  // //convert to date
+  // const dataDate = dataSplit?.map((item) => new Date(item));
+
+  // //retrieve data from localstorage
+  // const data = window.localStorage.getItem("selectedMealDate");
+  // //split by comma
+  // const dataSplit = data?.split(",");
+  // //convert to date
+  // const dataDate = dataSplit?.map((item) => new Date(item));
+  // //set to selectedValues
   const selectedValues = [];
+
   const [modmindate, setmodMindate] = React.useState(new Date());
   const [modmaxdate, setmodMaxdate] = React.useState(new Date());
 
-  //if mealDate is available
+  //if mealDate is available then retrieve it
+
   React.useEffect(() => {
-    const meal = localStorage.getItem("mealDate");
+    const meal = window.localStorage.getItem("mealDate");
     console.log(meal);
     if (meal != null) {
       const mealDates = meal?.split(" ");
@@ -65,7 +83,7 @@ const DateSelect = () => {
       //if there already is a value in localstorage then add the new after it
       const meal = localStorage.getItem("selectedMealDate");
       if (meal) {
-        localStorage.setItem("selectedMealDate", meal + " " + args.value);
+        localStorage.setItem("selectedMealDate", meal + "," + args.value);
       }
       //if same date is selected twice then remove it
       else if (meal === args.value) {
@@ -150,7 +168,7 @@ const DateSelect = () => {
 
             {/* selected dates  */}
             <div className="">
-              <label style={{ paddingTop: "22px" }}>Selected Meal Dates</label>
+              <label style={{ paddingTop: "22px" }}>Selected Management Dates</label>
               <div
                 className="content-value"
                 style={{
@@ -164,6 +182,9 @@ const DateSelect = () => {
               >
                 <div id="multiselect"></div>
               </div>
+              <button className="btn btn-success my-3 btn-outline" type="submit">
+                Confirm
+              </button>
             </div>
           </div>
         </div>
