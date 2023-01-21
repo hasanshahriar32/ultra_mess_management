@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar/navbar";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import BazarDate from "@/components/bazar/bazar";
 
 const bazar = () => {
   return (
@@ -18,6 +19,7 @@ const bazar = () => {
 
         <main className={styles.main}>
           <Navbar />
+          <BazarDate></BazarDate>
         </main>
       </>
     </div>
