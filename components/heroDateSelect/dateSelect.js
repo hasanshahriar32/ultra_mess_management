@@ -1,10 +1,8 @@
+import "./dateselect.module.css";
 import * as React from "react";
 import { updateSampleSection } from "./sample-base";
 import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
-import "./dateselect.module.css";
-
-// import styles from "./dateselect.module.css";
-
+import styles from "@/styles/DateSelect.module.css";
 const DateSelect = () => {
   let calendarInstance;
   const selectedValues = [];
@@ -69,70 +67,90 @@ const DateSelect = () => {
     localStorage.setItem("mealDate", modmindate + " " + modmaxdate);
   };
   return (
-    <div
-      className="hero min-h-screen bg-base-200"
-      // style={{ backgroundImage: `url("https://placeimg.com/1000/800/tech")` }}
-    >
-      <div className="hero-content flex-col lg:flex-row gap-5 ">
-        <div className=" control-section bg-base-300 m-3 p-4 rounded-lg">
-          {/* control  */}
-          <div
-            id="control_wrapper"
-            className="col-lg-6 col-sm-8 col-md-8 multiselectWrapper "
-          >
-            <div className="calendar-control-section w-28">
-              <CalendarComponent
-                id="calendar"
-                isMultiSelection={true}
-                values={selectedValues}
-                min={minDate}
-                max={maxDate}
-                ref={(scope) => {
-                  calendarInstance = scope;
-                }}
-                change={onchange.bind(this)}
-                created={onchange.bind(this)}
-              ></CalendarComponent>
+    <div className=" text-4xl py-6 text-center bg-base-200">
+      <h1>আপনার মানেজারির স্থায়িত্বকাল নির্ধারণ করুন</h1>
+      <div
+        className="hero  "
+        // style={{ backgroundImage: `url("https://placeimg.com/1000/800/tech")` }}
+      >
+        <div className="hero-content flex-col lg:flex-row gap-5 ">
+          <div className=" control-section bg-base-300 m-3 p-4 rounded-lg">
+            {/* control  */}
+            <div
+              id="control_wrapper"
+              style={{ maxWidth: "330px", margin: " 0 auto", float: "none" }}
+              className=" multiselectWrapper "
+            >
+              <div
+                style={{ maxwidth: " 300px", margin: "0 auto" }}
+                className="calendar-control-section  text-md lg:text-lg"
+              >
+                <CalendarComponent
+                  id="calendar"
+                  isMultiSelection={true}
+                  values={selectedValues}
+                  min={minDate}
+                  max={maxDate}
+                  ref={(scope) => {
+                    calendarInstance = scope;
+                  }}
+                  change={onchange.bind(this)}
+                  created={onchange.bind(this)}
+                  style={{ width: "100%" }}
+                ></CalendarComponent>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          {/* min and max  */}
-          <div className="my-3">
-            <label style={{ paddingTop: "22px" }}>From Date </label>
-            <input
-              type="date"
-              id="minDate"
-              onChange={updateMinSection}
-              className="e-input mr-5"
-            />
-            <label style={{ paddingTop: "22px" }}>To Date </label>
-            <input
-              type="date"
-              id="maxDate"
-              className="e-input"
-              onChange={updateMaxSection}
-              //set value 7 days from today
-              // defaultValue={
-              //   new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000)
-              //     .toISOString()
-              //     .split("T")[0]
-              // }
-            />
-            <button
-              type="submit"
-              className="btn btn-secondary btn-outline mx-2"
-              onClick={setSubmit}
-            >
-              Set
-            </button>
-          </div>
+          <div className="text-lg">
+            {/* min and max  */}
+            <div className="my-3">
+              <label style={{ paddingTop: "22px" }}>From Date </label>
+              <input
+                type="date"
+                id="minDate"
+                onChange={updateMinSection}
+                className="e-input mr-5"
+              />
+              <label style={{ paddingTop: "22px" }}>To Date </label>
+              <input
+                type="date"
+                id="maxDate"
+                className="e-input"
+                onChange={updateMaxSection}
+                //set value 7 days from today
+                // defaultValue={
+                //   new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000)
+                //     .toISOString()
+                //     .split("T")[0]
+                // }
+              />
+              <button
+                type="submit"
+                className="btn btn-secondary btn-outline mx-2"
+                onClick={setSubmit}
+              >
+                Set
+              </button>
+            </div>
 
-          {/* selected dates  */}
-          <label style={{ paddingTop: "22px" }}>Selected Meal Dates</label>
-          <div className="content-value">
-            <div id="multiselect"></div>
+            {/* selected dates  */}
+            <div className="">
+              <label style={{ paddingTop: "22px" }}>Selected Meal Dates</label>
+              <div
+                className="content-value"
+                style={{
+                  padding: "10px",
+                  overflow: "auto",
+                  maxHeight: "150px",
+                  border: "1px solid rgba(0, 0, 0, 0.12)",
+                  marginTop: "15px",
+                  fontSize: "12px",
+                }}
+              >
+                <div id="multiselect"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
