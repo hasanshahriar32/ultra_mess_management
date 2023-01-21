@@ -12,13 +12,15 @@ const DateSelect = () => {
   //if mealDate is available
   React.useEffect(() => {
     const meal = localStorage.getItem("mealDate");
-    if (meal != " ") {
+    console.log(meal);
+    if (meal != null) {
       const mealDates = meal?.split(" ");
-    }
-    const mealDate1 = mealDates[0];
-    const mealDate2 = mealDates[1];
+
+      const mealDate1 = mealDates[0];
+      const mealDate2 = mealDates[1];
+  
     setmodMindate(mealDate1);
-    setmodMaxdate(mealDate2);
+    setmodMaxdate(mealDate2);  }
   }, []);
 
   // set min and max date

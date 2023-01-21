@@ -2,7 +2,6 @@ import Navbar from "@/components/navbar/navbar";
 import Head from "next/head";
 // import styles from "@/styles/Home.module.css";
 import DateSelect from "@/components/heroDateSelect/dateSelect";
-import styles from "@/styles/DateSelect.module.css";
 const Meal = () => {
   return (
     <div>
