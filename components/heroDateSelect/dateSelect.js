@@ -18,9 +18,10 @@ const DateSelect = () => {
 
       const mealDate1 = mealDates[0];
       const mealDate2 = mealDates[1];
-  
-    setmodMindate(mealDate1);
-    setmodMaxdate(mealDate2);  }
+
+      setmodMindate(mealDate1);
+      setmodMaxdate(mealDate2);
+    }
   }, []);
 
   // set min and max date
