@@ -2,7 +2,7 @@ import "./dateselect.module.css";
 import * as React from "react";
 import { updateSampleSection } from "./sample-base";
 import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
-import styles from "@/styles/DateSelect.module.css";
+
 const DateSelect = () => {
   let calendarInstance;
   const selectedValues = [];
@@ -12,7 +12,9 @@ const DateSelect = () => {
   //if mealDate is available
   React.useEffect(() => {
     const meal = localStorage.getItem("mealDate");
-    const mealDates = meal.split(" ");
+    if (meal != " ") {
+      const mealDates = meal?.split(" ");
+    }
     const mealDate1 = mealDates[0];
     const mealDate2 = mealDates[1];
     setmodMindate(mealDate1);
@@ -61,6 +63,10 @@ const DateSelect = () => {
       const meal = localStorage.getItem("selectedMealDate");
       if (meal) {
         localStorage.setItem("selectedMealDate", meal + " " + args.value);
+      }
+      //if same date is selected twice then remove it
+      else if (meal === args.value) {
+        localStorage.removeItem("selectedMealDate");
       }
       //if there is no value in localstorage then add the new value
       else {
