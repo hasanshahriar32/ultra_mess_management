@@ -67,7 +67,7 @@ const DateSelect = () => {
     localStorage.setItem("mealDate", modmindate + " " + modmaxdate);
   };
   return (
-    <div className=" text-4xl py-6 text-center bg-base-200">
+    <div className="text-lg lg:text-4xl py-6 text-center bg-base-200">
       <h1>আপনার মানেজারির স্থায়িত্বকাল নির্ধারণ করুন</h1>
       <div
         className="hero  "
