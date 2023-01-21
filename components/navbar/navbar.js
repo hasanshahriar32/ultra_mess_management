@@ -34,6 +34,9 @@ const Navbar = () => {
                 <Link href="/meal">Meal Track</Link>
               </li>
               <li>
+                <Link href="/bazar">Bazar Date</Link>
+              </li>
+              <li>
                 <Link href="">About</Link>
               </li>
             </ul>

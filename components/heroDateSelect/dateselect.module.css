@@ -8,6 +8,7 @@
 #control_wrapper.multiselectWrapper {
   max-width: 330px;
   margin: 0 auto;
+  /* background-color: black; */
 }
 
 #control_wrapper.multiselectWrapper {
@@ -31,6 +32,7 @@
 .tailwind-dark .content-value,
 .fluent-dark .content-value {
   border: 1px solid rgb(150, 150, 150);
+  background-color: black;
 }
 
 body.fluent-dark #date_label,
@@ -45,7 +47,7 @@ body.highcontrast #date_label {
 
 /* end of custom generated icons styles */
 .calendar-control-section {
-  /* max-width: 300px; */
+  max-width: 300px;
   margin: 0 auto;
 }
 
